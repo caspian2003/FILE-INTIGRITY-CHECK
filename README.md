@@ -1,8 +1,20 @@
-# FILE-INTEGRITY-CHECK
+# FILE INTEGRITY CHECK
+
+#### Company: CodTech IT S olutions
+
+#### Intern name: Sri Harsha Aleti
+
+#### Intern Id: CT06DN88
+
+#### Domain: Cyber Security & Ethical Hacking
+
+#### Duration: 6 weeks
+
+#### Mentor: Neela Santosh
 
 # 🔐 File Integrity Check
 
-A robust Python-based CLI utility for verifying file integrity using industry-standard cryptographic hash functions. Designed for cybersecurity practitioners, forensic analysts, and developers to detect unauthorized modifications, corruption, or tampering of files.
+#### A robust Python-based CLI utility for verifying file integrity using industry-standard cryptographic hash functions. Designed for cybersecurity practitioners, forensic analysts, and developers to detect unauthorized modifications, corruption, or tampering of files.
 
 ## 🧬 What is File Integrity Checking?
 
