@@ -103,13 +103,19 @@ The script will sanitize and normalize paths before use.
 
 Option 1 (Save Hashes):
 
+first initial Hash calculation
+
 ![Image](https://github.com/user-attachments/assets/d5f646b1-39bd-4bb7-9457-0e8156f1dcd5)
 
+Here you have to select option 1 oe 2
 
-Hashes saved to hashes.txt.hashes
+![Image](https://github.com/user-attachments/assets/138a1d12-f466-455c-9018-d6375f045e2e)
 
-
+Hashes saved to hashes.txt
+ 
 Option 2 (Verify Integrity):
+
+
 
 Verifying file: example.txt
 MD5:     OK
