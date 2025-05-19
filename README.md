@@ -104,7 +104,10 @@ Sample Output 📊
 Option 1 (Save Hashes):
 
 ![Image](https://github.com/user-attachments/assets/d5f646b1-39bd-4bb7-9457-0e8156f1dcd5
+
+
 Hashes saved to hashes.txt.hashes
+
 
 Option 2 (Verify Integrity):
 
