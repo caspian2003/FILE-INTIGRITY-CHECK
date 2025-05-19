@@ -1,147 +1,126 @@
 # FILE-INTEGRITY-CHECK
 
-🔐File Integrity Check:
+# 🔐 File Integrity Check
 
 A robust Python-based CLI utility for verifying file integrity using industry-standard cryptographic hash functions. Designed for cybersecurity practitioners, forensic analysts, and developers to detect unauthorized modifications, corruption, or tampering of files.
 
---------------------------------------------------
+## 🧬 What is File Integrity Checking?
 
-What is File Integrity Checking? 🧬
+File integrity checking ensures that digital files remain unaltered during storage or transmission by comparing cryptographic hash digests before and after an event (e.g., transfer, update, or access).
 
-File integrity checking is a method to ensure that digital files remain unaltered during storage or transmission. This is accomplished by comparing cryptographic hash digests before and after an event (like transfer, update, or access).
+## 🔍 Why is it Important?
+- Detects unauthorized modifications (malware injection, unauthorized edits).
+- Ensures consistency during software deployment or backups.
+- Validates file authenticity in forensic or compliance scenarios.
 
-Why is it important?
+## ⚙️ How It Works
 
-Detects unauthorized modifications (malware injection, unauthorized edits)
+The tool provides two main functions: **Hashing** and **Verification**.
 
-Ensures consistency during software deployment or backups
+### ✅ Compute and Save Hashes
+- Reads the file in binary mode and chunked streams (8KB) to handle large files.
+- Calculates hashes using:
+  - MD5 (128-bit)
+  - SHA-1 (160-bit)
+  - SHA-224
+  - SHA-256 (256-bit)
+  - SHA-384
+  - SHA-512 (512-bit)
+- Stores all hash values in a JSON file: `"filename.hashes"`
 
-Validates file authenticity in forensic or compliance scenarios
+> **Note:** The tool automatically generates and saves computed hashes.
 
----
+### 🔄 Verify File Integrity
+- Loads saved hash values from `"filename.hashes"`.
+- Recomputes hashes for the file and compares each algorithm’s output:
+  - ✅ **If all hashes match:** File integrity is confirmed.
+  - ❌ **If any hash mismatches:** File has been tampered with or corrupted.
 
-How It Works ⚙️
+## 🚀 How to Run
 
-The tool provides two main functions: hashing and verification.
+### ✔️ Requirements:
+- Python 3.6+  
+  _(File Integrity Check works only on Python 3.5 and above)_
+- Built-in libraries:
+  - `hashlib`
+  - `pathlib`
+  - `json`
 
-1. Compute and Save Hashes
+## Usage Instruction:
 
-Reads the file in binary mode and chunked streams (8KB) to handle large files.
+To check for the python version-
+python --version:
 
-Calculates hashes using:
+```sh
+python --version
+```
 
-MD5 (128-bit)
+Follow these instruction to use the file integrity tool from cloning to execution:
 
-SHA-1 (160-bit)
+1.Clone the Repository
 
-SHA-224
+```Bash
+git clone
 
-SHA-256 (256-bit)
+https://github.com/caspian2003/file-integrity-check.git
 
-SHA-384
-
-SHA-512 (512-bit)
-
-Stores all hash values in a JSON file: "filename.hashes."
-
-Note:Here the code compute hashes and hashes will automatically generate and save in hashes file.
-
-2. Verify File Integrity
-
-Loads saved hash values from filename.hashes.
-Recomputes current hashes on the same file.
-
-Compares each algorithm's output:
-
-✅ If all hashes match: File integrity is confirmed.
-
-❌ If any hash mismatches: File has been tampered with or corrupted.
-
---------------------------------------------------
-
-How to Run 🚀
-
-✔️ Requirements:
-
-Python 3.6+
-(File integrity check is a python script which is works on only 3.5 and above version).
-
-{ python --version }
-
-{Built-in libraries like Haslib,pathlib,json}
-
-📝 Usage Instructions:
-
-1. Clone or Download the Repository
-
-git clone https://github.com/yourusername/file-integrity-check.git
 cd file-integrity-check
+```
 
+2.Run the script
 
-2. Run the Program
+```
+Bash
 
 python "file integrity check.py"
+```
 
-3. Interactive CLI Menu
+3.Choose Options Displayed in terminal
 
+```
 File Integrity Check Tool
-1. Compute and save hashes
-2. Verify file integrity
-Choose an option (1 or 2):
+1.Compute and save hashes
+2.Verify file integrity
+Choose an Option (1 or 2)
+```
+#### Option 1: Computes the hash values of a file and saves them to filename.hashes (in JSON format).
 
+#### Option 2: Verifies the current file against its saved hashes to check if the file has been modified.
 
-4. Enter File Path
+4.Enter File Path
 
-Use an absolute path or drag-and-drop into terminal.
+After choosing an option,input the path of the file you want to process.
 
-The script will sanitize and normalize paths before use.
+Examples:
 
+Enter the path to the file: C:\Users\SRI HARSHA\Desktop\codex\mr.robot.txt
+
+Enter the path to the file: /home/user/mr.robot.txt
+
+ You can also drag-and-drop the file into the terminal window for quick path entry.
 
 ---
 
-## Sample Output 📊
+5. Sample Outputs:
 
-Option 1 (Save Hashes):
+File integrity tool scan the directory and prints each file's hashes
 
-first initial Hash calculation
-
-![Image](https://github.com/user-attachments/assets/d5f646b1-39bd-4bb7-9457-0e8156f1dcd5)
-
-Here you have to select option 1 oe 2
-
-![Image](https://github.com/user-attachments/assets/138a1d12-f466-455c-9018-d6375f045e2e)
-
-Hashes saved to "mr.robot.hashes.txt"
- 
-Option 2 (Verify Integrity):
-
-![Image](https://github.com/user-attachments/assets/195eb074-f5dd-4167-b3d1-8f732337298c)
+Option 1 Output:
 
 
-Verifying file: mr.robot.txt
+Displays and stores hash values.
 
-MD5:     OK
+Output file: example.txt.hashes
 
-SHA1:    OK
 
-SHA384:  OK
+Option 2 Output:
 
-SHA512:  OK
+Compares current and stored hashes.
 
-SHA256:  OK
-...
-
-File integrity verified: all hashes matched.
-
-Final phase of integritry check:
-
---If any modification,changes and deletion files--
+Alerts if any mismatch is found (highlighting potential tampering).
 
 
 
-License 📄
-
-Distributed under the MIT License. See LICENSE file for more informtion.
 
 
 
