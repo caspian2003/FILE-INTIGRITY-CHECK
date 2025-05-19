@@ -82,7 +82,6 @@ cd file-integrity-check
 
 python "file integrity check.py"
 
-
 3. Interactive CLI Menu
 
 File Integrity Check Tool
@@ -103,12 +102,8 @@ The script will sanitize and normalize paths before use.
 Sample Output 📊
 
 Option 1 (Save Hashes):
-
-Computed hashes:
-MD5:     a8f5f167f44f4964e6c998dee827110c
-SHA1:    03de6c570bfe24bfc328ccd7ca46b76eadaf4334
-...
-Hashes saved to example.txt.hashes
+![Image](https://github.com/user-attachments/assets/d5f646b1-39bd-4bb7-9457-0e8156f1dcd5
+Hashes saved to hashes.txt.hashes
 
 Option 2 (Verify Integrity):
 
