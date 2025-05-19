@@ -111,19 +111,33 @@ Here you have to select option 1 oe 2
 
 ![Image](https://github.com/user-attachments/assets/138a1d12-f466-455c-9018-d6375f045e2e)
 
-Hashes saved to hashes.txt
+Hashes saved to "mr.robot.hashes.txt"
  
 Option 2 (Verify Integrity):
 
+![Image](https://github.com/user-attachments/assets/195eb074-f5dd-4167-b3d1-8f732337298c)
 
 
-Verifying file: example.txt
+Verifying file: mr.robot.txt
+
 MD5:     OK
-SHA1:    OK
-...
-File integrity verified: all hashes match.
 
----
+SHA1:    OK
+
+SHA384:  OK
+
+SHA512:  OK
+
+SHA256:  OK
+...
+
+File integrity verified: all hashes matched.
+
+Final phase of integritry check:
+
+--If any modification,changes and deletion files--
+
+
 
 License 📄
 
